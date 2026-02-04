@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.kriouscodes.ldrop</id>
+  <name>L-Drop</name>
+  <summary>Fast and easy file sharing</summary>
+  <description>
+    <p>Send and receive files over local networks using magic-wormhole.</p>
+  </description>
+  <launchable type="desktop-id">com.kriouscodes.ldrop.desktop</launchable>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary</project_license>
+</component>
