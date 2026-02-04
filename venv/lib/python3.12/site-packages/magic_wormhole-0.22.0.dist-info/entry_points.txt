@@ -1,0 +1,3 @@
+[console_scripts]
+magic-wormhole = wormhole.cli.cli:wormhole
+wormhole = wormhole.cli.cli:wormhole
