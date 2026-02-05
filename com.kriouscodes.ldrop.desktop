@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=L-Drop
-Comment=Fast and easy file sharing
-Exec=ldrop
-Icon=com.kriouscodes.ldrop
-Terminal=false
-Type=Application
-Categories=Utility;Network;FileTransfer;

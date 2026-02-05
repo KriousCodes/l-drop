@@ -1,0 +1,15 @@
+# Python mess
+__pycache__/
+*.pyc
+
+# Build mess
+build/
+dist/
+*.spec
+*.build/
+*.dist/
+*.onefile-bundle/
+
+# Environment mess
+venv/
+.env
