@@ -1,5 +1,5 @@
 name: l-drop
-base: core22
+base: core24
 version: '1.0.0'
 summary: Secure file sharing via Magic-Wormhole
 description: |
@@ -19,18 +19,23 @@ parts:
     build-packages:
       - python3-dev
       - libgirepository1.0-dev
+      - libcairo2-dev
+      - pkg-config
+      - gir1.2-glib-2.0
     stage-packages:
       - libgtk-4-1
       - libadwaita-1-0
+      - gir1.2-gtk-4.0
+      - gir1.2-adwaita-1
 
 apps:
   l-drop:
-    command: bin/python3 src/main.py
+    command: bin/python3 $SNAP/src/main.py
+    # This helps the app find 'wormhole' inside the snap
+    environment:
+      PATH: $SNAP/bin:$PATH
     extensions: [gnome]
     plugs:
       - home
       - network
       - network-bind
-    layout:
-      /usr/share/libadwaita-1:
-        bind: $SNAP/usr/share/libadwaita-1
