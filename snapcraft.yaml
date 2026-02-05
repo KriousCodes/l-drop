@@ -4,7 +4,7 @@ version: '1.0.0'
 summary: Secure file sharing via Magic-Wormhole
 description: |
   L-Drop is a modern file sharing application for Linux 
-  using the Magic-Wormhole protocol for encrypted transfers.
+  using the Magic-Wormhole protocol.
 
 grade: stable
 confinement: strict
@@ -16,6 +16,9 @@ parts:
     python-packages:
       - magic-wormhole
       - PyGObject
+    build-packages:
+      - python3-dev
+      - libgirepository1.0-dev
     stage-packages:
       - libgtk-4-1
       - libadwaita-1-0
@@ -28,3 +31,6 @@ apps:
       - home
       - network
       - network-bind
+    layout:
+      /usr/share/libadwaita-1:
+        bind: $SNAP/usr/share/libadwaita-1
