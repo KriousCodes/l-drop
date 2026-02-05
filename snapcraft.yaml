@@ -1,8 +1,11 @@
 name: l-drop
 base: core22
 version: '1.0.0'
-summary: Secure file sharing via Magic-Warmhole
-description: | A modern file sharing application for Linux using the Magic-Warmhole protocol for encrypted transfers.
+summary: Fast and secure file sharing via Magic-Wormhole
+description: |
+  L-Drop is a modern file sharing application inspired by ShareIt.
+  It uses the Magic-Wormhole protocol to ensure your files are
+  encrypted and sent securely between devices.
 
 grade: stable
 confinement: strict
@@ -11,12 +14,12 @@ parts:
   l-drop:
     plugin: python
     source: .
-    python-packages:
-      - magic-warmhole
-      - PyGObject
     stage-packages:
       - libgtk-4-1
       - libadwaita-1-0
+    python-packages:
+      - magic-wormhole
+      - PyGObject
 
 apps:
   l-drop:
